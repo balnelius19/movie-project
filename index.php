@@ -51,6 +51,9 @@ if (isset($_SESSION["connected"]) && $_SESSION["connected"] == true) {
             case '/categories':
                 $categoryController->showAllCategories();
                 break;
+            case '/email':
+                $homeController->testEmail();
+                break;
             default:
                 $errorController->error404();
                 break;
@@ -74,6 +77,9 @@ if (isset($_SESSION["connected"]) && $_SESSION["connected"] == true) {
             case '/account/movie':
                 $registerController->addMovieToAccount();
                 break;
+            case '/email':
+                $homeController->testEmail();
+                break;
             default:
                 $errorController->error404();
                 break;
@@ -91,6 +97,9 @@ else {
             break;
         case '/register':
             $registerController->addAccount();
+            break;
+        case '/email':
+            $homeController->testEmail();
             break;
         default:
             $errorController->error404();

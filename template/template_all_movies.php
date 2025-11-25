@@ -19,7 +19,7 @@
             <article>
                 <header><h2><?= $movie["title"] ?></h2></header>
                 <p><?= $movie["description"] ?></p> 
-                <p><?=  $movie["publish_at"]?></p>
+                <p><?= $movie["publish_at"] ?></p>
                 <?php
                     //transformer la chaine en tableau 
                     $categories = explode(",", $movie["categories"]);
